@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "frontend-app",
+    "slug": "frontend-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "frontend-app",
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.anonymous.frontendapp"
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
+    },
+    "permissions": [
+      "android.permission.RECORD_AUDIO"
+    ],
+    "package": "com.anonymous.frontendapp"
+  }
+}
