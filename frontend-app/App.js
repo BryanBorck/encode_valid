@@ -9,6 +9,7 @@ import JournalistScreen from './src/pages/Journalist/journalist';
 import ValidatorScreen from './src/pages/Validator/validator';
 import VerifierScreen from './src/pages/Verifier/verifier';
 import SignupScreen from './src/pages/Signup/signup';
+// import './shim';
 
 const Stack = createNativeStackNavigator();
 
