@@ -22,7 +22,7 @@ const VerifierScreen = ({navigation}) => {
             <Text className="text-light text-xl text-left pt-10 px-4 italic">Write below the piece of text you wish to check if is true or false:</Text>
             <TextInput
                 className="bg-light px-8 border-b-2 text-xl border-black2 w-full rounded-full h-12 mt-8 focus:outline-none focus:bg-tertiary"
-                placeholder="news to be credit-check"
+                placeholder="News to be credit-check"
                 value={newsToCheck}
                 onChangeText={setNewsToCheck}
             />

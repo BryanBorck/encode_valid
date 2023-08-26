@@ -25,7 +25,7 @@ const HomeScreen = ({navigation}) => {
             >
                 <Image 
                     source={require('../../assets/valid_logo_transparent.png')}
-                    className="h-24 max-w-full scale-50 mt-6"
+                    className="h-24 max-w-full scale-50 mt-[10%]"
                     resizeMode="contain"
                 />
                 <View className="flex flex-col items-center px-10 pb-16 pt-2">
