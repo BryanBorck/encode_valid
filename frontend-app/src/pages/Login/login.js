@@ -5,10 +5,6 @@ import 'nativewind';
 
 const LoginScreen = ({navigation}) => {
 
-    function goToAction(navigation) {
-        navigation.navigate("")
-    }
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
