@@ -25,12 +25,12 @@ const HomeScreen = ({navigation}) => {
             >
                 <Image 
                     source={require('../../assets/valid_logo_transparent.png')}
-                    className="h-24 max-w-full scale-50 mt-8"
+                    className="h-24 max-w-full scale-50 mt-6"
                     resizeMode="contain"
                 />
-                <View className="flex flex-col items-center px-10 pb-20 pt-2">
+                <View className="flex flex-col items-center px-10 pb-16 pt-2">
                     <Text className="bg-primary text-black2 font-bold text-2xl mt-6 px-10 py-1">Who are you?</Text>
-                    <View className="flex flex-row items-center space-x-6 mt-12">
+                    <View className="flex flex-row items-center space-x-6 mt-8">
                         <Text className="text-pri font-bold text-xl basis-1/2 text-center">I'm user</Text>
                         <Text className="text-pri font-bold text-xl basis-1/2 text-center">I'm journalist</Text>
                     </View>
@@ -52,10 +52,10 @@ const HomeScreen = ({navigation}) => {
                     </View>
                 </View>
 
-                <View className="bg-primary w-full flex flex-col items-center px-10 py-12">
+                <View className="bg-primary w-full flex flex-col items-center px-10 py-10">
                     <Text className="text-black2 text-xl text-center w-[70vw]">A solution to check false information by connecting the user to the news source.</Text>
                 </View>
-                <View className="bg-secondary h-48 flex flex-row items-center space-x-6 px-10 py-10">
+                <View className="bg-secondary h-36 flex flex-row items-center space-x-6 px-10 py-10">
                     <Image 
                         source={require('../../assets/bbc-logo-0.png')}
                         className="basis-1/5 px-2"
