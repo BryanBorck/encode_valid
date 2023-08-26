@@ -6,15 +6,32 @@ import 'nativewind';
 
 const ValidatorScreen = ({navigation}) => {
 
+    const [link, setLink] = useState('');
+
     return (
         <SafeAreaView className="bg-light flex-1 justify-center items-center px-10">
-            {/* <ImageBackground source={image} resizeMode="cover" style={styles.image}></ImageBackground> */}
             <Image 
-                source={require('../../assets/valid_logo_transparent.png')}
-                className="h-40 max-w-full scale-50"
-                resizeMode="contain"
-            />
-            <Text className="text-black2 text-xl">Validator</Text>
+                    source={require('../../assets/valid_logo_transparent.png')}
+                    className="h-40 max-w-full scale-50"
+                    resizeMode="contain"
+                />
+            <View className="bg-black2 h-100 px-10 w-full rounded-[20px] flex sitems-center justify-center">
+                {/* <ImageBackground source={image} resizeMode="cover" style={styles.image}></ImageBackground> */}
+                <Text className="text-light text-xl text-center">Add link to</Text>
+                <Text className="text-light text-xl text-center">the network</Text>
+                <TouchableOpacity className="bg-secondary w-full h-12 border rounded-full shadow-md flex items-center justify-center mt-4" onPress={() => navigation.navigate("")}>
+                    <Text className="text-black2 text-xl">Connect your wallet</Text>
+                </TouchableOpacity>
+                <TextInput
+                    className="bg-light pl-4 border-b-2 text-xl border-black2 w-full rounded-full h-12 mt-4 focus:outline-none focus:bg-tertiary"
+                    placeholder="Link"
+                    value={link}
+                    onChangeText={setLink}
+                />
+                <TouchableOpacity className="bg-secondary w-full h-12 border rounded-full shadow-md flex items-center justify-center mt-4" onPress={() => navigation.navigate("")}>
+                    <Text className="text-black2 text-xl">Submit</Text>
+                </TouchableOpacity>
+            </View>
         </SafeAreaView>
     );
 };  
