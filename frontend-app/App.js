@@ -8,6 +8,7 @@ import HomeScreen from './src/pages/Home/home';
 import JournalistScreen from './src/pages/Journalist/journalist';
 import ValidatorScreen from './src/pages/Validator/validator';
 import VerifierScreen from './src/pages/Verifier/verifier';
+import SignupScreen from './src/pages/Signup/signup';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,13 @@ export default function App() {
               <Stack.Screen name="Login" options={{ headerShown: false }}>
                   {(props) => (
                       <LoginScreen
+                          {...props}
+                      />
+                  )}
+              </Stack.Screen>
+              <Stack.Screen name="Signup" options={{ headerShown: false }}>
+                  {(props) => (
+                      <SignupScreen
                           {...props}
                       />
                   )}

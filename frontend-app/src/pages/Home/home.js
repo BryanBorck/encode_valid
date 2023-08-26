@@ -18,23 +18,66 @@ const HomeScreen = ({navigation}) => {
     };
 
     return (
-        <SafeAreaView className="bg-light flex-1 justify-center items-center px-10">
-            {/* <ImageBackground source={image} resizeMode="cover" style={styles.image}></ImageBackground> */}
-            <Image 
-                source={require('../../assets/valid_logo_transparent.png')}
-                className="h-40 max-w-full scale-50"
-                resizeMode="contain"
-            />
-            <Text className="text-black2 text-xl">Write below the piece of text you wish to check if is true or false:</Text>
-            <TouchableOpacity className="bg-primary w-full h-12 rounded-full shadow-md flex items-center justify-center mt-6" onPress={() => navigation.navigate("Journalist")}>
-                <Text className="text-black2 text-xl">JOURNALIST</Text>
-            </TouchableOpacity>
-            <TouchableOpacity className="bg-primary w-full h-12 rounded-full shadow-md flex items-center justify-center mt-6" onPress={() => navigation.navigate("Validator")}>
-                <Text className="text-black2 text-xl">VALIDATOR</Text>
-            </TouchableOpacity>
-            <TouchableOpacity className="bg-primary w-full h-12 rounded-full shadow-md flex items-center justify-center mt-6" onPress={() => navigation.navigate("Verifier")}>
-                <Text className="text-black2 text-xl">VERIFIER</Text>
-            </TouchableOpacity>
+        <SafeAreaView className="bg-light h-screen flex-1 justify-center items-center">
+            <ImageBackground
+                source={require('../../assets/newspaper_bkg.png')}
+                className="h-full w-[100vw] flex-1 justify-center items-center"
+            >
+                <Image 
+                    source={require('../../assets/valid_logo_transparent.png')}
+                    className="h-24 max-w-full scale-50 mt-8"
+                    resizeMode="contain"
+                />
+                <View className="flex flex-col items-center px-10 pb-20 pt-2">
+                    <Text className="bg-primary text-black2 font-bold text-2xl mt-6 px-10 py-1">Who are you?</Text>
+                    <View className="flex flex-row items-center space-x-6 mt-12">
+                        <Text className="text-pri font-bold text-xl basis-1/2 text-center">I'm user</Text>
+                        <Text className="text-pri font-bold text-xl basis-1/2 text-center">I'm journalist</Text>
+                    </View>
+                    <View className="h-56 flex flex-row items-center space-x-6">
+                        <TouchableOpacity className="bg-transparent basis-1/2" onPress={() => navigation.navigate("Verifier")}>
+                            <Image 
+                                source={require('../../assets/avatar_default_bw.png')}
+                                className="max-w-full"
+                                resizeMode="contain"
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity className="bg-transparent basis-1/2" onPress={() => navigation.navigate("Validator")}>
+                            <Image 
+                                source={require('../../assets/avatar_journalist_default_bw.png')}
+                                className="max-w-full"
+                                resizeMode="contain"
+                            />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+                <View className="bg-primary w-full flex flex-col items-center px-10 py-12">
+                    <Text className="text-black2 text-xl text-center w-[70vw]">A solution to check false information by connecting the user to the news source.</Text>
+                </View>
+                <View className="bg-secondary h-48 flex flex-row items-center space-x-6 px-10 py-10">
+                    <Image 
+                        source={require('../../assets/bbc-logo-0.png')}
+                        className="basis-1/5 px-2"
+                        resizeMode="contain"
+                    />
+                    <Image 
+                        source={require('../../assets/cnn-logo-1-1.png')}
+                        className="basis-1/5 px-2"
+                        resizeMode="contain"
+                    />
+                    <Image 
+                        source={require('../../assets/Symbol-New-York-Times.png')}
+                        className="basis-1/5 px-2 scale-75"
+                        resizeMode="contain"
+                    />
+                    <Image 
+                        source={require('../../assets/washingtonpost_logo_icon_170226.png')}
+                        className="basis-1/5 px-2"
+                        resizeMode="contain"
+                    />
+                </View>
+            </ImageBackground>
         </SafeAreaView>
     );
 };  

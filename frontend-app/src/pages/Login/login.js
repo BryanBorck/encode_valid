@@ -5,13 +5,6 @@ import 'nativewind';
 
 const LoginScreen = ({navigation}) => {
 
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleLogin = () => {
-        // Implement your login logic here
-    };
-
     return (
         <SafeAreaView className="bg-light flex-1 justify-center items-center">
             <ImageBackground
@@ -23,25 +16,15 @@ const LoginScreen = ({navigation}) => {
                     className="h-40 max-w-full scale-50"
                     resizeMode="contain"
                 />
-                <TextInput
-                    className="bg-light pl-4 border-b-2 text-xl border-black2 w-full h-16 mt-16 focus:outline-none focus:bg-tertiary"
-                    placeholder="Username"
-                    value={username}
-                    onChangeText={setUsername}
-                />
-                <TextInput
-                    className="bg-light pl-4 border-b-2 text-xl border-black2 w-full h-16 mt-4 focus:outline-none focus:bg-tertiary"
-                    placeholder="Password"
-                    secureTextEntry
-                    value={password}
-                    onChangeText={setPassword}
-                />
                 <TouchableOpacity className="bg-primary w-full h-12 rounded-full shadow-md flex items-center justify-center mt-24" onPress={() => navigation.navigate("Home")}>
-                    <Text className="text-black2 text-xl">Entre</Text>
+                    <Text className="text-black2 text-xl">Login as User</Text>
                 </TouchableOpacity>
-                <TouchableOpacity className="bg-secondary w-full h-12 rounded-full shadow-md flex items-center justify-center mt-4" onPress={() => navigation.navigate("")}>
-                    <Text className="text-light text-xl">Cadastre-se</Text>
+                <TouchableOpacity className="bg-secondary w-full h-12 rounded-full shadow-md flex items-center justify-center mt-4" onPress={() => navigation.navigate("Signup")}>
+                    <Text className="text-light text-xl">Sign up as Journalist</Text>
                 </TouchableOpacity>
+                <View>
+                    <Text className="bg-light px-[10vw] py-2 text-black2 text-md text-center mt-24">You can login without authentication as a user, and you need to signup to send news as a journalist</Text>
+                </View>
             </ImageBackground>
         </SafeAreaView>
     );
