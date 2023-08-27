@@ -25,3 +25,16 @@ Valid Protocol is a Decentralized Application that utilizes blockchain in a fund
 
 Let's see now how Valid Protocol operates.
 
+## Valid Protocol
+
+Our solution thrives upon a simple idea.
+
+The way we check if some piece of information is true isn't actually to check its veracity - but to check its source. 
+If NASA, for instance, published some specs on their new rocket, we would never be able to ensure its veracity, and they can actually be wrong - publishing then a correction afterward. But even if they're wrong in the beginning, they are the most reliable source on the topic, so we trust the content due to the credibility of the source.
+
+Valid Protocol uses a Smart Contract to list credited sources (such as CNN, BBC, WHO, NASA, UN, etc.) and their wallet addresses. The information they input into the blockchain is then, for memory purposes, hashed into a fixed bytes32 piece of data, which is unique.  This hash identifies the content published by the source.
+
+If a user wishes to know whether a piece of information is true, all it must do is input this information into the blockchain through the smart contract. It will hash the information inputed and then compare it to the log - if a 100% match is found, then the input was indeed published by a verifiable source - hence, it is not fake. On the other hand, if a mismatch is the product, then it possibly is fake news.
+
+
+
